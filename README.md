@@ -57,16 +57,18 @@
 
    #####  demo.js里添加代码：1、重写crashBtnClick方法 2、跳转新建的JPTableViewController控制器
 
-        //修改ViewController控制器的handleBtn方法（原控制器漏此方法，会导致崩溃）。
+        //1、修改ViewController控制器的handleBtn方法（原控制器漏此方法，会导致崩溃）。
+
         defineClass('ViewController', {//defineClass：声明要被修改的控制器
-        crashBtnClick: function(sender) { //声明要被修改的方法
+        crashBtnClick: function(sender) { //声明要被修改或重写的方法
         var tableViewCtrl = JPTableViewController.alloc().init()
         self.navigationController().pushViewController_animated(tableViewCtrl, YES)
         },
 
         })
 
-        //新建JPTableViewController控制器
+        //2、新建JPTableViewController控制器
+
         defineClass('JPTableViewController : UITableViewController <UIAlertViewDelegate>', ['data'], {
         dataSource: function() {
         var data = self.data();
@@ -120,7 +122,7 @@
             1. 服务器尽量使用https传输
             2. 对传输的代码做好加密和校验
 
-        PHP、iOS 使用JSPatch基本与RSA,AES加密：
-       ![JSPatchUse](http://www.jianshu.com/p/e6191c9e63c1）
+PHP、iOS 使用JSPatch基本与RSA,AES加密：
+http://www.jianshu.com/p/e6191c9e63c1
 
 
