@@ -106,10 +106,10 @@
 
 
 *****************
- ---至此JSPatch在前端设置和使用差不多了。
+      至此JSPatch在前端设置和使用差不多了。
 *****************
 
-### 步骤3：通过请求后台更新项目中demo.js补丁文件来达到动态修复项目Bug的功能。demo.js从后台下载后要加密存储到沙盒中。
+### 步骤4：通过请求后台更新项目中demo.js补丁文件来达到动态修复项目Bug的功能。demo.js从后台下载后要加密存储到沙盒中。
 
 
     #####  demo.js的加密：
@@ -121,6 +121,6 @@
             2. 对传输的代码做好加密和校验
 
         PHP、iOS 使用JSPatch基本与RSA,AES加密：
-        http://www.jianshu.com/p/e6191c9e63c1
+       ![JSPatchUse](http://www.jianshu.com/p/e6191c9e63c1）
 
 
