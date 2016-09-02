@@ -7,7 +7,9 @@
  *****************
  
 # 使用文档
+
 [JSPatch使用文档](https://github.com/niexiaobo/JSPatchUse/blob/master/JSPatch%20%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.docx)
+
 [JSPatch Use Word file](https://github.com/niexiaobo/JSPatchUse/blob/master/JSPatch%20%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.docx)
 
 # 使用方法
