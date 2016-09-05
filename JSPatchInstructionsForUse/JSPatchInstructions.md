@@ -18,16 +18,16 @@
 
 
 # 目录
-1. 什么是JSPatch	2
-1. 仓库设置方法（后台文件管理）	3
-1. ios前端配置	3
-1. 更新频率，及App更新方法代码名称	4
-1. 五、请求数据（前后台接口设置）	5
-1. 六、前端下载和使用	6
-* 本地使用	6
-* 下载使用	7
-1. JSPatch语法	7
-1. JSPatch 部署安全策略	8
+1. 什么是JSPatch	
+1. 仓库设置方法（后台文件管理）	
+1. ios前端配置	
+1. 更新频率，及App更新方法代码名称	
+1. 请求数据（前后台接口设置）	
+1. 前端下载和使用	
+> 本地使用	
+> 下载使用	
+1. JSPatch语法	
+1. JSPatch 部署安全策略	
 
 
 ## 一、什么是JSPatch 
@@ -38,7 +38,7 @@
 
 js文件肯定不能随便往后台某个文件夹一放就让前端去下载了，虽然使用方便但是在App或者版本较多时容易混乱。建议专门搭建一个远端仓库，仓库里 主要就是文件夹和js文件，当需要提交js文件时，从主干迁出一个分支，在合适的地方新建文件夹并添加js文件，然后给主干提Pull Request， 这应该是一个麻烦但是规范的流程。文件夹结构参考下图:
 
-![buildSetting](https://github.com/niexiaobo/JSPatchUse/JSPatchInstructionsForUse/image/buildSetting.png)
+![buildSetting](https://github.com/niexiaobo/JSPatchUse/blob/master/JSPatchInstructionsForUse/image/buildSetting.png)
 
 第三层文件夹里，可以用版本名称也可以使用build号。
 
@@ -56,8 +56,8 @@ js文件肯定不能随便往后台某个文件夹一放就让前端去下载了
 我之前看到很多人把使用js和下载js的代码都放在了didFinishLaunchingWithOptions： 这个方法。我觉得有所不妥，因为如果这个app用户一直放在手机的后台（比如微信），并且也没出现内存警告的话，这个方法应该一直不会调用。我建议的是： 使用js文件的代码放在didFinishLaunchingWithOptions： 而下载js文件的代码放在applicationDidBecomeActive: 因为这个方法在程序启动和后台回到前台时都会调用。并且我建议设置一个间隔时间，根据一些数据和权衡之后我们采用的是间隔时间设为1小时。 也就是说每次来到这个方法时，先要检测是距离上次发请求的时间间隔是否超过1小时，超过则发请求，否则跳过。
 前端更新逻辑：
 
-![liucheng1](https://github.com/niexiaobo/JSPatchUse/JSPatchInstructionsForUse/image/liucheng1.png)
-![liucheng2](https://github.com/niexiaobo/JSPatchUse/JSPatchInstructionsForUse/image/liucheng2.png)
+![liucheng1](https://github.com/niexiaobo/JSPatchUse/blob/master/JSPatchInstructionsForUse/image/liucheng1.png)
+![liucheng2](https://github.com/niexiaobo/JSPatchUse/blob/master/JSPatchInstructionsForUse/image/liucheng2.png)
 
 
 ## 五、请求数据（前后台接口设置）
@@ -114,7 +114,7 @@ js文件肯定不能随便往后台某个文件夹一放就让前端去下载了
 
 这个JSPatch语法 并不是一个正式的语种，大家不会投入太大的精力来仔细学习，所以作者本人也提供了一个简单粗暴的OC到JS直接转换地址：[JSPatchConvertor](http://bang590.github.io/JSPatchConvertor/)
 
-![clangRuanjian](https://github.com/niexiaobo/JSPatchUse/JSPatchInstructionsForUse/image/clangRuanjian.png)
+![clangRuanjian](https://github.com/niexiaobo/JSPatchUse/blob/master/JSPatchInstructionsForUse/image/clangRuanjian.png)
 
 这个地址亲测一些简单的写法是正确转换的，但是比较复杂的语法还是不能让机器直接搞定，还是需要人工修改的。作者也在不断完善这个工具。
 
