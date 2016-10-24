@@ -22,10 +22,10 @@
         编辑或创建Podfile命令：
         vim Podfile
 
-        【输入“i”进入编辑内容状态，添加：
+        输入"i"进入编辑内容状态，添加：
         platform :ios, '6.0'
         pod 'JSPatch'
-        粘贴后，按“esc”，输入“：”，再输入“wq”，回车】
+        粘贴后，按"esc"，输入":"，再输入"wq"，回车】
 
         安装命令：
         pod install
